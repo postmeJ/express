@@ -5,8 +5,6 @@ this.path = this.lookup(fileName)
 这种写法使变量声明比较清晰
 例如this.path不在View中声明为null,在this.lookup中修改this.path的值
 
-对比于es6,在constructor中,不建议实现这种需求
-
 
 2. :81
 var fn = require(mod).__express
