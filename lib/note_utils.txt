@@ -1,0 +1,16 @@
+1. :49
+Check if `path` looks absolute
+是否是绝对路径
+
+2. :82
+是否包含指定字符 ~
+
+3. :274
+Create an ETag generator function
+createETagGenerator(args)(args)(args)
+
+1. 结构简单
+2. 命名简单
+3. 方法独立
+
+1. 不建议套的层次过多

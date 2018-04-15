@@ -1,0 +1,22 @@
+1. :91
+在构造类View中
+this.engine = opts.engins[this.ext]
+this.path = this.lookup(fileName)
+这种写法使变量声明比较清晰
+例如this.path不在View中声明为null,在this.lookup中修改this.path的值
+
+
+2. :81
+var fn = require(mod).__express
+动态去加载使用到的模版引擎
+
+3. :146
+Resolve the file within the given directory.
+主要是处理path/index.ext的省略写法 
+path
+path/
+path/index.ext
+效果是一样的
+
+4. :174
+同步且简单的抛错,用try catch简单处理下

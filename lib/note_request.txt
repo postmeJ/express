@@ -1,0 +1,44 @@
+3. :463
+// GET or HEAD for weak freshness validation only
+if ('GET' !== method && 'HEAD' !== method) return false;
+
+2. :502
+http://blog.csdn.net/javajiawei/article/details/50563154
+以X打头的头域作为非HTTP标准协议，一般是某种技术的出现而产生或者某个组织指定的
+HttpRequest对象.setRequestHeader("X-Requested-With","任意字符串")
+
+1. :515
+浅谈 JS 对象添加 getter与 setter 的5种方法以及如何让对象属性不可配置或枚举
+https://segmentfault.com/a/1190000003882976
+
+express使用defineProperty,我习惯使用defineProperty和defineProperties
+
+var req = {}
+Object.defineProperty(req, 'xhr', {
+  configurable: true,
+  enumerable: true,
+  get: function () {
+    // ...
+    // 在这里已经实现了
+  }
+});
+
+var req = {}
+req._xhr = ''
+Object.defineProperty(req, 'xhr', {
+  configurable: true,
+  enumerable: true,
+  set: function(val) {
+    this._xhr = val
+  },
+  get: function () {
+    return this._xhr
+  }
+});
+
+思路上有es6的setter,getter一样
+
+而:515的get返回值是动态的.
+注意req.xhr和req._xhr是不同的,相当于req.xhr是的setter和getter, 而req._xhr才是真正的属性
+
+
